@@ -12,7 +12,7 @@
 
 NAME = push_swap
 
-SRCS = push_swap.c
+SRCS = src/main.c
 OBJS = $(SRCS:.c=.o)
 
 
@@ -21,7 +21,7 @@ CFLAGS  = -g -Wall -Wextra -Werror
 INCLUDE = -Ilibft
 RM      = rm -f
 
-LIBFT_DIR = ./libft
+LIBFT_DIR = ./includes/libft
 LIBFT_A = $(LIBFT_DIR)/libft.a
 
 all: $(LIBFT_A) $(NAME)

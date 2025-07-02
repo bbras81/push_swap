@@ -10,11 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	main(int argc, char **argv)
 {
-	if (argc != 2)
-		return (EXIT_SUCCESS);
-	ft_printf("%s", argv[1]);
+	int		i;
+	char	**vector;
+
+	i = 0;
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
+		return (1);
+	if (argc == 2)
+		vector = ft_split(argv[1], ' ');
+	while (vector[i])
+	{
+		ft_printf("%s\n", vector[i]);
+		i++;
+	}
+	free(vector);
 }
