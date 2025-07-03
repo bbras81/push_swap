@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:35:29 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/03 11:55:54 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/03 12:16:01 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,13 @@ t_stack_node	*init_stack(int argc, char **argv)
 	int				value;
 
 	i = 0;
+
+
+
+	
 	while (argv[i])
 	{
-		value = ft_atoi(argv[i]);
+		value = ft_atoi(argv[i]); 
 		new = new_node(value);
 	}
 	return (head_node);
