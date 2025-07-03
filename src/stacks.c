@@ -43,7 +43,7 @@ void	add_botton(t_stack_node **stack, t_stack_node *new)
 	}
 }
 
-t_stack_node	*init_stack(char **argv)
+t_stack_node	*init_stack(char **argv, int argc)
 {
 	t_stack_node	*head_node;
 	t_stack_node	*new;
@@ -52,9 +52,9 @@ t_stack_node	*init_stack(char **argv)
 
 	i = 0;
 	head_node = NULL;
-	value = ft_atoi(argv[i]);
-	while (argv[i])
+	while (i < argc)
 	{
+		value = ft_atoi(argv[i]);
 		new = new_node(value);
 		if (!new)
 		{

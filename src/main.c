@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 		return (ft_putendl_fd("Error", 1), 1);
 		free_array(args_checker);
 	}
-	stack_a = init_stack(args_checker);
+	stack_a = init_stack(args_checker, argc);
 	while (stack_a)
 	{
 		ft_printf("%d\n", stack_a->value);
