@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 19:16:12 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/01 19:21:46 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/07/02 22:39:47 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/07/03 09:22:40 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+static char	**check_args(char **args, int argc)
+{
+	char	**ret_args;
+
+	if (argc == 2)
+	{
+		ret_args = ft_split(args[1], ' ');
+		if (!ret_args)
+			free_array(ret_args);
+	}
+	else
+	{
+		ret_args = &args[1];
+	}
+	return (ret_args);
+}
+
 int	main(int argc, char **argv)
 {
-	int		i;
-	char	**vector;
+	char	**args_checker;
 
-	i = 0;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	if (argc == 2)
-		vector = ft_split(argv[1], ' ');
-	while (vector[i])
-	{
-		ft_printf("%s\n", vector[i]);
-		i++;
-	}
-	free(vector);
+		return (ft_putendl_fd("Error", 1), 1);
+	if (argc >= 2)
+		args_checker = check_args(argv, argc);
+	if (!args_checker)
+		return (ft_putendl_fd("Error", 1), 1);
+	return (0);
 }

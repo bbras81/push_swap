@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:17:53 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/01 19:21:48 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/03 09:22:40 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,12 @@
 typedef struct s_stack_node
 {
 	int					value;
-	int					current_position;
-	int					final_index;
-	int					push_price;
-	bool				above_median;
-	bool				cheapest;
-	struct s_stack_node	*target_node;
+	int					index;
 	struct s_stack_node	*next;
-	struct s_stack_node	*prev;
-
 }						t_stack_node;
 
 int						ft_printf(const char *str, ...);
 char					**ft_split(char const *s, char c);
+void					free_array(char **arr);
+void					ft_putendl_fd(char *s, int fd);
 #endif
