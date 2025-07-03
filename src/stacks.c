@@ -25,10 +25,6 @@ static t_stack_node	*new_node(int value)
 	return (new_node);
 }
 
-
-
-
-
 t_stack_node	*init_stack(int argc, char **argv)
 {
 	t_stack_node	*head_node;
@@ -44,7 +40,7 @@ t_stack_node	*init_stack(int argc, char **argv)
 		if (!new)
 		{
 			free_stack(&head_node);
-			return;
+			return (NULL);
 		}
 	}
 	return (head_node);

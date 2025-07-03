@@ -26,13 +26,13 @@ void	free_array(char **arr)
 	}
 }
 
-void free_stack(t_stack_node **stack)
+void	free_stack(t_stack_node **stack)
 {
-	t_stack_node *current;
-	t_stack_node *temp;
+	t_stack_node	*current;
+	t_stack_node	*temp;
 
-	if(!stack)
-		return;
+	if (!stack)
+		return ;
 	current = *stack;
 	while (current)
 	{
