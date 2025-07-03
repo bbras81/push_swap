@@ -33,13 +33,9 @@ t_stack_node	*init_stack(int argc, char **argv)
 	int				value;
 
 	i = 0;
-
-
-
-	
 	while (argv[i])
 	{
-		value = ft_atoi(argv[i]); 
+		value = ft_atoi(argv[i]);
 		new = new_node(value);
 	}
 	return (head_node);
