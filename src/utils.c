@@ -25,3 +25,20 @@ void	free_array(char **arr)
 		i++;
 	}
 }
+
+void free_stack(t_stack_node **stack)
+{
+	t_stack_node *current;
+	t_stack_node *temp;
+
+	if(!stack)
+		return;
+	current = *stack;
+	while (current)
+	{
+		temp = current;
+		current = current->next;
+		free(temp);
+	}
+	*stack = NULL;
+}

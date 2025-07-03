@@ -25,6 +25,10 @@ static t_stack_node	*new_node(int value)
 	return (new_node);
 }
 
+
+
+
+
 t_stack_node	*init_stack(int argc, char **argv)
 {
 	t_stack_node	*head_node;
@@ -33,10 +37,15 @@ t_stack_node	*init_stack(int argc, char **argv)
 	int				value;
 
 	i = 0;
+	value = ft_atoi(argv[i]);
 	while (argv[i])
 	{
-		value = ft_atoi(argv[i]);
 		new = new_node(value);
+		if (!new)
+		{
+			free_stack(&head_node);
+			return;
+		}
 	}
 	return (head_node);
 }
