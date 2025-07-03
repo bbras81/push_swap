@@ -6,13 +6,13 @@
 #    By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/01 19:02:19 by brunmigu          #+#    #+#              #
-#    Updated: 2025/07/01 19:32:49 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/07/03 11:33:49 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRCS = src/main.c src/utils.c
+SRCS = src/main.c src/utils.c src/stacks.c
 OBJS = $(SRCS:.c=.o)
 
 

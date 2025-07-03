@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 22:39:47 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/03 09:22:40 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/03 11:33:50 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,18 @@ static char	**check_args(char **args, int argc)
 
 int	main(int argc, char **argv)
 {
-	char	**args_checker;
+	char			**args_checker;
+	t_stack_node	*stack_a;
 
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (ft_putendl_fd("Error", 1), 1);
 	if (argc >= 2)
 		args_checker = check_args(argv, argc);
 	if (!args_checker)
+	{
 		return (ft_putendl_fd("Error", 1), 1);
+		free_array(args_checker);
+	}
+	stack_a = init_stack(argc, args_checker);
 	return (0);
 }
