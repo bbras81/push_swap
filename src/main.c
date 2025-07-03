@@ -44,5 +44,10 @@ int	main(int argc, char **argv)
 		free_array(args_checker);
 	}
 	stack_a = init_stack(argc, args_checker);
+	while (stack_a)
+	{
+		ft_printf("%d\n", stack_a->value);
+		stack_a = stack_a->next;
+	}
 	return (0);
 }

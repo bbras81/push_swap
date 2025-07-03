@@ -25,8 +25,20 @@ static t_stack_node	*new_node(int value)
 	return (new_node);
 }
 
+void add_botton(t_stack_node **stack, t_stack_node *new)
+{
+	t_stack_node *temp;
 
-
+	if (!stack || !new)
+		return ;
+	if(!*stack)
+		*stack = *new;
+	else 
+	{
+		new->next = *stack;
+		*stack = *new;
+	}
+}
 
 
 t_stack_node	*init_stack(int argc, char **argv)
@@ -46,6 +58,8 @@ t_stack_node	*init_stack(int argc, char **argv)
 			free_stack(&head_node);
 			return;
 		}
+		add_botton(&head_noden, new);
+		i++;
 	}
 	return (head_node);
 }
