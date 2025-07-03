@@ -29,7 +29,7 @@ int						ft_printf(const char *str, ...);
 char					**ft_split(char const *s, char c);
 void					free_array(char **arr);
 void					ft_putendl_fd(char *s, int fd);
-t_stack_node			*init_stack(int argc, char **argv);
-void					add_botton(t_stack_node **stack, t_stack_node *new);
+t_stack_node			*init_stack(char **argv);
+void					add_botton(t_stack_node **stack, t_stack_node *nw);
 void					free_stack(t_stack_node **stack);
 #endif
