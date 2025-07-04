@@ -33,7 +33,8 @@ int	main(int argc, char **argv)
 {
 	char			**args_checker;
 	t_stack_node	*stack_a;
-
+	
+	args_checker = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (ft_putendl_fd("Error", 1), 1);
 	if (argc >= 2)
