@@ -52,7 +52,7 @@ t_stack_node	*init_stack(char **argv, int argc)
 
 	i = 0;
 	head_node = NULL;
-	while (i < argc)
+	while (i < argc - 1)
 	{
 		value = ft_atoi(argv[i]);
 		new = new_node(value);

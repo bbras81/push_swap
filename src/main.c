@@ -33,7 +33,9 @@ int	main(int argc, char **argv)
 {
 	char			**args_checker;
 	t_stack_node	*stack_a;
-	
+	int				i;
+
+	i = 0;
 	args_checker = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (ft_putendl_fd("Error", 1), 1);
@@ -43,6 +45,11 @@ int	main(int argc, char **argv)
 	{
 		return (ft_putendl_fd("Error", 1), 1);
 		free_array(args_checker);
+	}
+	while (args_checker[i])
+	{
+		ft_printf("%s\n", args_checker[i]);
+		i++;
 	}
 	stack_a = init_stack(args_checker, argc);
 	while (stack_a)
