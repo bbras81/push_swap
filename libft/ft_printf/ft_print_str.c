@@ -9,7 +9,8 @@
 /*   Updated: 2025/05/02 16:23:36 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_printf.h"
+
+#include "../includes/libft.h"
 
 int	ft_print_str(char *str)
 {

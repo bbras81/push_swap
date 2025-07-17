@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   pushswap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 17:11:26 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/05/03 17:14:06 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/07/17 10:18:50 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/07/17 10:21:38 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef PUSHSWAP_H
+#define PUSHSWAP_H
 
-int	ft_print_char(char c)
-{
-	int	counter;
+#include "../libft/includes/libft.h"
+#include <stdlib.h>
 
-	counter = 1;
-	ft_putchar_fd(c, 1);
-	return (counter);
-}
+
+#endif

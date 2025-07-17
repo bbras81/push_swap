@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 17:11:26 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/05/03 17:14:06 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/07/17 10:16:48 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/07/17 10:25:37 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/pushswap.h"
 
-int	ft_print_char(char c)
+int main(int argc, char **argv)
 {
-	int	counter;
-
-	counter = 1;
-	ft_putchar_fd(c, 1);
-	return (counter);
+    ft_printf("OLA MUNDO");
+    return EXIT_SUCCESS;
 }

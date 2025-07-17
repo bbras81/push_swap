@@ -3,18 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/04/17 19:26:40 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/13 12:30:11 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <stdint.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <limits.h>
+# include <stdarg.h>
+# include <stddef.h>
+# include <stdint.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 //-------------------------
 // - ctype.h -
@@ -78,3 +83,28 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void),
 						void (*del)(void *));
+
+//-------------------------
+// - Printf.h -
+//-------------------------
+int					ft_printf(const char *str, ...);
+int					ft_print_str(char *str);
+int					ft_print_dec(int nbr);
+int					ft_print_char(char c);
+int					ft_print_udec(unsigned int nbr);
+int					ft_print_hex(unsigned long nbr, char *base);
+int					ft_print_ptr(void *ptr);
+
+//-------------------------
+// - Gnl.h -
+//-------------------------
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+char	*get_next_line(int fd);
+int		found_new_line(char *remainder);
+char	*extract_line(char *remainder);
+char	*update_remainder(char *remainder);
+
+#endif

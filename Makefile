@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+         #
+#    By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/01 19:02:19 by brunmigu          #+#    #+#              #
-#    Updated: 2025/07/03 11:33:49 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/07/17 10:16:28 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRCS = src/main.c src/utils.c src/stacks.c
+SRCS = src/main.c
 OBJS = $(SRCS:.c=.o)
 
 
@@ -21,7 +21,7 @@ CFLAGS  = -g -Wall -Wextra -Werror
 INCLUDE = -Ilibft
 RM      = rm -f
 
-LIBFT_DIR = ./includes/libft
+LIBFT_DIR = ./libft
 LIBFT_A = $(LIBFT_DIR)/libft.a
 
 all: $(LIBFT_A) $(NAME)

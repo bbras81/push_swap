@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdarg.h>
+#include "../includes/libft.h"
 
 static int	ft_getformat(char c, va_list args)
 {
