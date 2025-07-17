@@ -3,16 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brunmigu <brunmigu@student.42.fr>          +#+  +:+       +#+         #
+#    By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/08 14:41:38 by brunmigu          #+#    #+#              #
-#    Updated: 2025/07/10 22:10:25 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/07/17 10:50:51 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-GNL_NAME = get_next_line.a
-PRINTF_NAME = libftprintf.a
 
 SRCS = ft_libft/ft_isalpha.c \
 	ft_libft/ft_isdigit.c \
@@ -47,12 +45,20 @@ SRCS = ft_libft/ft_isalpha.c \
 	ft_libft/ft_putchar_fd.c \
 	ft_libft/ft_putstr_fd.c \
 	ft_libft/ft_putendl_fd.c \
-	ft_libft/ft_putnbr_fd.c
-
-GNL_SRCS = ft_get_next_line/get_next_line.c \
-	ft_get_next_line/get_next_line_utils.c
-
-PRINTF_SRCS = ft_printf/ft_printf.c \
+	ft_libft/ft_putnbr_fd.c \
+	ft_libft/ft_lstadd_back.c \
+	ft_libft/ft_lstadd_front.c \
+	ft_libft/ft_lstclear.c \
+	ft_libft/ft_lstdelone.c \
+	ft_libft/ft_lstiter.c \
+	ft_libft/ft_lstlast.c \
+	ft_libft/ft_lstnew.c \
+	ft_libft/ft_lstsize.c\
+	ft_get_next_line/get_next_line.c \
+	ft_get_next_line/get_next_line_utils.c \
+	ft_get_next_line/get_next_line_bonus.c \
+	ft_get_next_line/get_next_line_utils_bonus.c \
+	ft_printf/ft_printf.c \
 	ft_printf/ft_print_char.c \
 	ft_printf/ft_print_str.c \
 	ft_printf/ft_print_dec.c \
@@ -61,8 +67,6 @@ PRINTF_SRCS = ft_printf/ft_printf.c \
 	ft_printf/ft_print_ptr.c
 
 OBJS = $(SRCS:.c=.o)
-GNL_OBJS = $(GNL_SRCS:.c=.o)
-PRINTF_OBJS = $(PRINTF_SRCS:.c=.o)
 
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
@@ -75,13 +79,6 @@ $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@echo "libft.a compiled successfully."
 
-get_next_line: $(GNL_OBJS)
-	@ar rcs $(GNL_NAME) $(GNL_OBJS)
-	@echo "get_next_line.a compiled successfully."
-
-ft_printf: $(PRINTF_OBJS)
-	@ar rcs $(PRINTF_NAME) $(PRINTF_OBJS)
-	@echo "libftprintf.a compiled successfully."
 
 %.o: %.c
 	@$(COMPILER) $(CFLAGS) $(INCLUDE) -c $< -o $@

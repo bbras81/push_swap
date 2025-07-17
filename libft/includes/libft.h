@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/13 12:30:11 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:44:12 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,11 @@ int					ft_print_ptr(void *ptr);
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif 
+
 
 char	*get_next_line(int fd);
 int		found_new_line(char *remainder);
