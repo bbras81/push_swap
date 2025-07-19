@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stacks_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 10:16:48 by brunmigu          #+#    #+#             */
+/*   Created: 2025/07/19 12:13:19 by brunmigu          #+#    #+#             */
 /*   Updated: 2025/07/19 12:34:52 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
 
-int	main(int argc, char **argv)
-{
-	int	i;
 
-	i = -1;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (EXIT_FAILURE);
-	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	else
-		argv = &argv[1];
-	while (argv[++i])
-	{
-		ft_printf("%s\n", argv[i]);
-	}
-	return (EXIT_SUCCESS);
+
+
+void	init_stack(t_node *stack, char **args, int argc)
+{
+	t_node	new_stack;
+
+	(void)argc;
+	if (!stack || !args)
+		return ;
+  if (argc == 2)
+
 }
+
+
+

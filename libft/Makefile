@@ -69,7 +69,7 @@ SRCS = ft_libft/ft_isalpha.c \
 OBJS = $(SRCS:.c=.o)
 
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 COMPILER = cc
 INCLUDE = -Iincludes
 
