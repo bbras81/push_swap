@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:16:48 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/19 12:34:52 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:10:51 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;
+	t_node	*stack_a;
 
-	i = -1;
+	stack_a = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (EXIT_FAILURE);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
 	else
 		argv = &argv[1];
-	while (argv[++i])
-	{
-		ft_printf("%s\n", argv[i]);
-	}
+  
 	return (EXIT_SUCCESS);
 }

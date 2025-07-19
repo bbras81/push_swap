@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:25:44 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/17 10:44:12 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:10:51 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 int					ft_atoi(const char *nptr);
+long				ft_atol(const char *nptr);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -98,18 +99,17 @@ int					ft_print_ptr(void *ptr);
 //-------------------------
 // - Gnl.h -
 //-------------------------
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5
-# endif
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 5
+#endif
 
-# ifndef MAX_FD
-#  define MAX_FD 1024
-# endif 
+#ifndef MAX_FD
+# define MAX_FD 1024
+#endif
 
-
-char	*get_next_line(int fd);
-int		found_new_line(char *remainder);
-char	*extract_line(char *remainder);
-char	*update_remainder(char *remainder);
+char				*get_next_line(int fd);
+int					found_new_line(char *remainder);
+char				*extract_line(char *remainder);
+char				*update_remainder(char *remainder);
 
 #endif

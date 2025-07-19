@@ -33,6 +33,7 @@ SRCS = ft_libft/ft_isalpha.c \
 	ft_libft/ft_memcmp.c \
 	ft_libft/ft_strnstr.c \
 	ft_libft/ft_atoi.c \
+	ft_libft/ft_atol.c \
 	ft_libft/ft_calloc.c \
 	ft_libft/ft_strdup.c \
 	ft_libft/ft_substr.c \

@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks_utils.c                                     :+:      :+:    :+:   */
+/*   errors_handler.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brunmigu <brunmigu@students.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 12:13:19 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/19 12:34:52 by brunmigu         ###   ########.fr       */
+/*   Created: 2025/07/19 17:19:02 by brunmigu          #+#    #+#             */
+/*   Updated: 2025/07/19 17:23:53 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
 
-
-
-
-void	init_stack(t_node *stack, char **args, int argc)
+int	basic_error(void)
 {
-	t_node	new_stack;
-
-	(void)argc;
-	if (!stack || !args)
-		return ;
-  if (argc == 2)
-
+	ft_printf("Error");
+	return (EXIT_FAILURE);
 }
-
-
-
