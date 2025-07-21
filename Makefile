@@ -12,13 +12,13 @@
 
 NAME = push_swap
 
-SRCS = src/main.c src/stack_utils.c
+SRCS = src/main.c src/stack_utils.c src/errors_handler.c
 OBJS = $(SRCS:.c=.o)
 
 
 CC      = cc
 CFLAGS  = -g -Wall -Wextra -Werror
-INCLUDE = -Ilibft
+INCLUDE = -I libft
 RM      = rm -f
 
 LIBFT_DIR = ./libft
