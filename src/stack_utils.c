@@ -12,17 +12,17 @@
 
 #include "../includes/pushswap.h"
 
-t_node	*new_node(int value)
+void append_node(t_node **stack, int value)
 {
   t_node	*new;
 
   new = ft_calloc(1, sizeof(t_node));
   if (!new)
-    return (NULL);
+    return ;
   new->index = -1;
   new->value = value;
   new->next = NULL;
-  return (new);
+
 }
 
 void	init_stack(t_node **stack, char **args)
@@ -39,8 +39,8 @@ void	init_stack(t_node **stack, char **args)
     nbr = ft_atol(args[i]);
     if (nbr > INT_MAX || nbr < INT_MIN)
       basic_error();
+    append_node(stack, (int)nbr);
 
       
-    new_node(ft_atoi(args[i]));
   }
 }
