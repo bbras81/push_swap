@@ -14,6 +14,6 @@
 
 int	basic_error(void)
 {
-	ft_printf("Error");
-	return (EXIT_FAILURE);
+	ft_printf("Error\n");
+	exit(EXIT_FAILURE);
 }

@@ -12,6 +12,19 @@
 
 #include "../includes/pushswap.h"
 
+static int	is_duplicated(t_node *stack, int nbr)
+{
+	while (stack != NULL)
+	{
+		if (stack->value == nbr)
+		{
+			return (EXIT_FAILURE);
+		}
+		stack = stack->next;
+	}
+	return (EXIT_SUCCESS);
+}
+
 static void	append_node(t_node **stack, int value)
 {
 	t_node	*new;
@@ -49,6 +62,8 @@ void	init_stack(t_node **stack, char **args)
 	{
 		nbr = ft_atol(args[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
+			basic_error();
+		if (is_duplicated(*stack, nbr))
 			basic_error();
 		append_node(stack, (int)nbr);
 	}
