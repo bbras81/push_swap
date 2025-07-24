@@ -12,8 +12,8 @@
 
 NAME = push_swap
 
-SRCS = src/main.c src/stack_utils.c src/errors_handler.c src/swap.c \
-			 src/push.c src/rotate.c src/reverse.c
+SRCS = src/main.c src/stack_utils.c src/errors_handler.c src/operations/swap.c \
+			 src/operations/push.c src/operations/rotate.c src/operations/reverse.c
 OBJS = $(SRCS:.c=.o)
 
 
