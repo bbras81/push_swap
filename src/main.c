@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 		argv = &argv[1];
 	init_stack(&a, argv);
 	// init_stack(&b, argv);
-	pb(&a, &b);
+	rra(&a);
 	aux = a;
 	printf("-------a-------\n");
 	while (aux != NULL)

@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:18:50 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/21 15:12:43 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/24 18:06:15 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ void				sb(t_node **stack);
 void				ss(t_node **stack_a, t_node **stack_b);
 void				pa(t_node **a, t_node **b);
 void				pb(t_node **a, t_node **b);
+void				ra(t_node **stack);
+void				rra(t_node **stack);
 #endif
