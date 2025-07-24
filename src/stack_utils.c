@@ -6,11 +6,26 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:13:19 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/19 17:23:53 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/23 12:16:45 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
+
+void	free_stack(t_node **stack)
+{
+	t_node	*curr;
+	t_node	*aux;
+
+	curr = *stack;
+	while (curr != NULL)
+	{
+		aux = curr;
+		curr = curr->next;
+		free(aux);
+	}
+	*stack = NULL;
+}
 
 static int	is_duplicated(t_node *stack, int nbr)
 {
@@ -62,9 +77,15 @@ void	init_stack(t_node **stack, char **args)
 	{
 		nbr = ft_atol(args[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
+		{
+			free_stack(stack);
 			basic_error();
+		}
 		if (is_duplicated(*stack, nbr))
+		{
+			free_stack(stack);
 			basic_error();
+		}
 		append_node(stack, (int)nbr);
 	}
 }

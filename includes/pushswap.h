@@ -29,4 +29,10 @@ char				**ft_split(char const *s, char c);
 void				init_stack(t_node **stack, char **args);
 long				ft_atol(const char *nptr);
 int					basic_error(void);
+void				free_stack(t_node **stack);
+void				sa(t_node **stack);
+void				sb(t_node **stack);
+void				ss(t_node **stack_a, t_node **stack_b);
+void				pa(t_node **a, t_node **b);
+void				pb(t_node **a, t_node **b);
 #endif
