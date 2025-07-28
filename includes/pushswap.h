@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:18:50 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/24 18:06:15 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/25 20:50:27 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,6 @@ void				rr(t_node **stack_a, t_node **stack_b);
 void				rra(t_node **stack);
 void				rrb(t_node **stack);
 void				rrr(t_node **stack_a, t_node **stack_b);
+void				push_swap(t_node **stack_a, t_node **stack_b);
+void				sort_three(t_node **stack_a, t_node **stack_b);
 #endif

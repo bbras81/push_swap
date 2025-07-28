@@ -6,14 +6,15 @@
 #    By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/01 19:02:19 by brunmigu          #+#    #+#              #
-#    Updated: 2025/07/24 18:06:34 by brunmigu         ###   ########.fr        #
+#    Updated: 2025/07/25 20:19:59 by brunmigu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 SRCS = src/main.c src/stack_utils.c src/errors_handler.c src/operations/swap.c \
-			 src/operations/push.c src/operations/rotate.c src/operations/reverse.c
+			 src/operations/push.c src/operations/rotate.c src/operations/reverse.c \
+			 src/push_swap.c src/radix.c
 OBJS = $(SRCS:.c=.o)
 
 

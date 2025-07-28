@@ -28,9 +28,7 @@ int	main(int argc, char **argv)
 		argv = &argv[1];
 	init_stack(&a, argv);
 	// init_stack(&b, argv);
-	pb(&a, &b);
-	pb(&a, &b);
-	pb(&a, &b);
+	push_swap(&a, &b);
 	aux = a;
 	printf("-------a-------\n");
 	while (aux != NULL)
