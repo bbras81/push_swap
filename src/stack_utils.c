@@ -27,6 +27,28 @@ void	free_stack(t_node **stack)
 	*stack = NULL;
 }
 
+static void	assing_indexes(t_node *stack)
+{
+	t_node	*current;
+	t_node	*compare;
+	int		index;
+
+	current = stack;
+	while (current)
+	{
+		compare = stack;
+		index = 0;
+		while (compare)
+		{
+			if (compare->value < current->value)
+				index++;
+			compare = compare->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
+}
+
 static int	is_duplicated(t_node *stack, int nbr)
 {
 	while (stack != NULL)
@@ -88,4 +110,5 @@ void	init_stack(t_node **stack, char **args)
 		}
 		append_node(stack, (int)nbr);
 	}
+	assing_indexes(*stack);
 }

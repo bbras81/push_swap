@@ -28,19 +28,11 @@ int	main(int argc, char **argv)
 		argv = &argv[1];
 	init_stack(&a, argv);
 	// init_stack(&b, argv);
-	push_swap(&a, &b);
 	aux = a;
 	printf("-------a-------\n");
 	while (aux != NULL)
 	{
-		printf("%d\n", aux->value);
-		aux = aux->next;
-	}
-	printf("-------b-------\n");
-	aux = b;
-	while (aux != NULL)
-	{
-		printf("%d\n", aux->value);
+		printf("Value -> %d Index -> %d\n", aux->value, aux->index);
 		aux = aux->next;
 	}
 	free_stack(&a);
