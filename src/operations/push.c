@@ -33,5 +33,5 @@ void	pa(t_node **a, t_node **b)
 void	pb(t_node **a, t_node **b)
 {
 	push(a, b);
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 }

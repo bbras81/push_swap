@@ -102,3 +102,32 @@ void	sort_five(t_node **stack_a, t_node **stack_b, int size)
 		pa(stack_a, stack_b);
 	}
 }
+
+void	radix_sort(t_node **stack_a, t_node **stack_b, int size)
+{
+	int	max_bits;
+	int	max_size;
+	int	i;
+	int	j;
+
+	max_size = size;
+	max_bits = 0;
+	while (max_size >> max_bits)
+		max_bits++;
+	i = 0;
+	while (i < max_bits)
+	{
+		j = 0;
+		while (j < size)
+		{
+			if (((*stack_a)->index >> i & 1) == 0)
+				pb(stack_a, stack_b);
+			else
+				ra(stack_a);
+			j++;
+		}
+		while (*stack_b)
+			pa(stack_b, stack_a);
+		i++;
+	}
+}

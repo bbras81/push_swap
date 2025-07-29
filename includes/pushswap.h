@@ -47,4 +47,5 @@ void				sort_three(t_node **stack_a);
 void				sort_five(t_node **stack_a, t_node **stack_b, int size);
 int					find_index(t_node *stack, int index);
 int					node_counter(t_node *stack);
+void				radix_sort(t_node **stack_a, t_node **stack_b, int size);
 #endif
