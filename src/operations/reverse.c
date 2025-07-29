@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pushswap.h"
+#include "../../includes/pushswap.h"
 #include <unistd.h>
 
 void	reverse(t_node **stack)

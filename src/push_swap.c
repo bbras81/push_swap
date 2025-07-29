@@ -12,7 +12,7 @@
 
 #include "../includes/pushswap.h"
 
-static int	node_counter(t_node *stack)
+int	node_counter(t_node *stack)
 {
 	t_node	*curr;
 	int		counter;
@@ -48,16 +48,18 @@ static int	is_sorted(t_node *stack)
 
 void	push_swap(t_node **stack_a, t_node **stack_b)
 {
-	int	node_qty;
+	int	stack_size;
 
-	node_qty = node_counter(*stack_a);
+	stack_size = node_counter(*stack_a);
 	(void)stack_b;
-	ft_printf("Node quanty: %d\n", node_qty);
+	ft_printf("Node quanty: %d\n", stack_size);
 	while (!is_sorted(*stack_a))
 	{
-		if (node_qty >= 3)
-		{
-			sort_three(stack_a, stack_b);
-		}
+		if (stack_size == 2)
+			sa(stack_a);
+		else if (stack_size == 3)
+			sort_three(stack_a);
+		else if (stack_size > 3 && stack_size < 6)
+			sort_five(stack_a, stack_b, stack_size);
 	}
 }

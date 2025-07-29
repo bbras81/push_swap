@@ -6,7 +6,7 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 12:13:19 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/23 12:16:45 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:26:26 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,21 @@ void	free_stack(t_node **stack)
 		free(aux);
 	}
 	*stack = NULL;
+}
+
+void	free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	if (!split)
+		return ;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
 
 static void	assing_indexes(t_node *stack)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pushswap.h"
+#include "../../includes/pushswap.h"
 #include <unistd.h>
 
 static void	rotate(t_node **stack)
