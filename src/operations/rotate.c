@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../../includes/pushswap.h"
-#include <unistd.h>
 
 static void	rotate(t_node **stack)
 {
@@ -35,11 +34,13 @@ void	ra(t_node **stack)
 	rotate(stack);
 	ft_printf("ra\n");
 }
+
 void	rb(t_node **stack)
 {
 	rotate(stack);
 	ft_printf("rb\n");
 }
+
 void	rr(t_node **stack_a, t_node **stack_b)
 {
 	rotate(stack_a);

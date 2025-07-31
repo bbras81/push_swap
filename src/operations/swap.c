@@ -31,6 +31,7 @@ void	sa(t_node **stack)
 	swap(stack);
 	ft_printf("sa\n");
 }
+
 void	sb(t_node **stack)
 {
 	swap(stack);
