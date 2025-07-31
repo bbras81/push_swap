@@ -12,7 +12,7 @@
 
 #include "../includes/pushswap.h"
 
-static void	only_nbr(char **argv)
+static void	only_nbr(char **argv, int coutes)
 {
 	int	i;
 	int	j;
@@ -24,9 +24,14 @@ static void	only_nbr(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]))
+			{
+				if (coutes == 1)
+					free_split(argv);
 				basic_error();
+			}
 			j++;
 		}
+		j = 0;
 		i++;
 	}
 }
@@ -49,7 +54,7 @@ int	main(int argc, char **argv)
 	}
 	else
 		argv = &argv[1];
-	only_nbr(argv);
+	only_nbr(argv, coutes);
 	init_stack(&a, argv);
 	push_swap(&a, &b);
 	if (coutes == 1)
