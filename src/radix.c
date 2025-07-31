@@ -54,26 +54,26 @@ void	sort_three(t_node **stack_a)
 {
 	int	first;
 	int	second;
-	int	third;
+	int	three;
 
-	first = (*stack_a)->value;
-	second = (*stack_a)->next->value;
-	third = (*stack_a)->next->next->value;
-	if (first < second && first < third)
+	first = (*stack_a)->index;
+	second = (*stack_a)->next->index;
+	three = (*stack_a)->next->next->index;
+	if (first > second && second < three && first < three)
+		sa(stack_a);
+	else if (first > second && second < three && first > three)
+		ra(stack_a);
+	else if (first > second && second > three)
 	{
 		sa(stack_a);
-		ra(stack_a);
-	}
-	else if (first > second && first < third)
-		sa(stack_a);
-	else if (first < second && first > third)
 		rra(stack_a);
-	else if (first > second && first > third)
-		ra(stack_a);
-	else if (first > second && first > third && second > third)
+	}
+	else if (first < second && second > three && first > three)
+		rra(stack_a);
+	else if (first < second && second > three)
 	{
+		rra(stack_a);
 		sa(stack_a);
-		ra(stack_a);
 	}
 }
 

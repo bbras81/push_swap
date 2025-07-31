@@ -18,20 +18,22 @@ static void	only_nbr(char **argv, int coutes)
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (argv[i])
 	{
-		while (argv[i][j])
-		{
-			if (!ft_isdigit(argv[i][j]))
-			{
-				if (coutes == 1)
-					free_split(argv);
-				basic_error();
-			}
-			j++;
-		}
 		j = 0;
+		if (argv[i][j] == '-' || argv[i][j] == '+')
+			j++;
+		if (!argv[i][j])
+			basic_error();
+		while (argv[i][j])
+			if (!ft_isdigit(argv[i][j++]))
+				basic_error();
+		if (argv[i][j])
+		{
+			if (coutes == 1)
+				free_split(argv);
+			basic_error();
+		}
 		i++;
 	}
 }
@@ -46,7 +48,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	coutes = 0;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (EXIT_FAILURE);
+		return (basic_error());
 	else if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
