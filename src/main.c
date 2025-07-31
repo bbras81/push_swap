@@ -12,18 +12,18 @@
 
 #include "../includes/pushswap.h"
 
-static void only_nbr(char **argv)
+static void	only_nbr(char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	while(argv[i])
+	while (argv[i])
 	{
-		while(argv[i][j])
+		while (argv[i][j])
 		{
-			if(!ft_isdigit(argv[i][j]))
+			if (!ft_isdigit(argv[i][j]))
 				basic_error();
 			j++;
 		}
