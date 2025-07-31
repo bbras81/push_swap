@@ -13,16 +13,16 @@
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
 
+# include "../libft/includes/libft.h"
+# include <limits.h>
+# include <stdlib.h>
+
 typedef struct s_node
 {
 	int				value;
 	int				index;
 	struct s_node	*next;
 }					t_node;
-
-# include "../libft/includes/libft.h"
-# include <limits.h>
-# include <stdlib.h>
 
 int					ft_printf(const char *str, ...);
 char				**ft_split(char const *s, char c);
