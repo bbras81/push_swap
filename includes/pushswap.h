@@ -26,7 +26,7 @@ typedef struct s_node
 
 int					ft_printf(const char *str, ...);
 char				**ft_split(char const *s, char c);
-void				init_stack(t_node **stack, char **args);
+void				init_stack(t_node **stack, char **args, int coutes);
 long				ft_atol(const char *nptr);
 int					basic_error(void);
 void				free_stack(t_node **stack);

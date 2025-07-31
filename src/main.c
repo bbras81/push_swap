@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 	else
 		argv = &argv[1];
 	only_nbr(argv, coutes);
-	init_stack(&a, argv);
+	init_stack(&a, argv, coutes);
 	push_swap(&a, &b);
 	if (coutes == 1)
 		free_split(argv);

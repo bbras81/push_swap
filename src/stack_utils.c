@@ -101,7 +101,7 @@ static void	append_node(t_node **stack, int value)
 	curr->next = new;
 }
 
-void	init_stack(t_node **stack, char **args)
+void	init_stack(t_node **stack, char **args, int coutes)
 {
 	int		i;
 	long	nbr;
@@ -116,6 +116,8 @@ void	init_stack(t_node **stack, char **args)
 		if (nbr > INT_MAX || nbr < INT_MIN)
 		{
 			free_stack(stack);
+			if (coutes == 1)
+				free_split(args);
 			basic_error();
 		}
 		if (is_duplicated(*stack, nbr))
