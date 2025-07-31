@@ -51,7 +51,6 @@ void	push_swap(t_node **stack_a, t_node **stack_b)
 	int	stack_size;
 
 	stack_size = node_counter(*stack_a);
-	ft_printf("Node quanty: %d\n", stack_size);
 	while (!is_sorted(*stack_a))
 	{
 		if (stack_size == 2)

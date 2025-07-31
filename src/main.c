@@ -6,11 +6,30 @@
 /*   By: brunmigu <brunmigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 10:16:48 by brunmigu          #+#    #+#             */
-/*   Updated: 2025/07/29 13:27:55 by brunmigu         ###   ########.fr       */
+/*   Updated: 2025/07/31 12:00:14 by brunmigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
+
+static void only_nbr(char **argv)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while(argv[i])
+	{
+		while(argv[i][j])
+		{
+			if(!ft_isdigit(argv[i][j]))
+				basic_error();
+			j++;
+		}
+		i++;
+	}
+}
 
 int	main(int argc, char **argv)
 {
@@ -30,6 +49,7 @@ int	main(int argc, char **argv)
 	}
 	else
 		argv = &argv[1];
+	only_nbr(argv);
 	init_stack(&a, argv);
 	push_swap(&a, &b);
 	if (coutes == 1)

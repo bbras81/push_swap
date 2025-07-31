@@ -24,14 +24,14 @@ static void	push(t_node **src, t_node **dest)
 	*dest = temp;
 }
 
-void	pa(t_node **a, t_node **b)
+void	pa(t_node **from, t_node **to)
 {
-	push(b, a);
+	push(from, to);
 	ft_printf("pa\n");
 }
 
-void	pb(t_node **a, t_node **b)
+void	pb(t_node **from, t_node **to)
 {
-	push(a, b);
+	push(from, to);
 	ft_printf("pb\n");
 }
